@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useDispatch } from 'react-redux'
 import { deleteFlight } from '../features/flights/flightSlice'
 import details from './data'
 
 const FlightItem = ({flight, user}) => {
 
-  const [list , setList] = useState(0);
+  
   const {id,Flight_name} = details;
 
   // const checkNumber = (number)=>{
