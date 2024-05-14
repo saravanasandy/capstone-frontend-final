@@ -51,7 +51,7 @@ const Dashboard = () => {
       (<>
          <div className='goals'>
            {flights.map((flight)=>{
-            return <FlightItem  key={flight._id} flight={flight}/>
+            return <FlightItem  key={flight._id} flight={flight} user={user.name}/>
            })}   
          </div>
       </> ) 

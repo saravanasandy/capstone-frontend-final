@@ -1,13 +1,50 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { deleteFlight } from '../features/flights/flightSlice'
+import details from './data'
 
-const FlightItem = ({flight}) => {
+const FlightItem = ({flight, user}) => {
+
+  const [list , setList] = useState(0);
+  const {id,Flight_name} = details;
+
+  // const checkNumber = (number)=>{
+  //   if(number > details.length - 1){
+  //     return 0;
+  //   }
+  //   if(number < 0){
+  //     return details.length - 1;
+  //   }
+  //   return number;
+  //  }
+
+ 
+    let randomNumber = Math.floor(Math.random() * details.length);
+    // console.log(details[randomNumber].Flight_name);
+     
+    //  console.log(flight.ClassType);
+
+     
 
     const dispatch = useDispatch()
   return (
     <>
+
+
          <div className='flight-details-list'>
+           
+         <div>
+          <h4> Passenger</h4>
+        <h2 className='flight-items'>{user}</h2>
+        </div>
+
+
+         <div>
+          <h4> Flight Name</h4>
+        <h2 className='flight-items'>{details[randomNumber].Flight_name}</h2>
+        <h5>Flight Number</h5>
+        <h4 className='flight-items'> {details[randomNumber].Flight_number}</h4>
+        </div>
         <div>
           <h4>Booking Time</h4>
         <div className='flight-items'>
@@ -17,6 +54,7 @@ const FlightItem = ({flight}) => {
         
         
         {/* <h3>{flight._id}</h3> */}
+
         <div>
           <h4> From</h4>
         <h2 className='flight-items'>{flight.Destination_From}</h2>
@@ -28,8 +66,8 @@ const FlightItem = ({flight}) => {
         </div>
         
         <div>
-        <h4> Date </h4>
-        <h2 className='flight-items'>{flight.Journey_Date}</h2>
+        <h4> price </h4>
+        <h2 className='flight-items'>{flight.ClassType === 'Business' ? flight.Guests * 2500 :flight.Guests * 1000 }</h2>
         </div>
         <div>
         <h4> Persons </h4>

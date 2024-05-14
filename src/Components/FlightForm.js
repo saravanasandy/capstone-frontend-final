@@ -12,6 +12,7 @@ const FlightForm = () => {
         Guests:"",
         ClassType:"",
       });
+      
       const dispatch = useDispatch()
   
 
