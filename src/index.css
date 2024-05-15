@@ -216,13 +216,19 @@ h3 {
 .container-form{
 display: flex;
 justify-content: center;
+ 
 }
 
 .form{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+ flex-flow:row wrap;
   gap: 10px;
+}
+
+.form-content{
+  flex-grow: 2;
 }
 
 .select-option{
@@ -245,7 +251,9 @@ justify-content: center;
   font-family: 'Poppins', sans-serif;
 }
 
+
 .book{
+  margin-top: 26px;
   background-color:#6a6a6a;
   color: #000000;
   
@@ -265,11 +273,13 @@ justify-content: center;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   /* border: 1px solid grey; */
+  flex-wrap: row wrap;
   margin: 25px 18px;
-
 }
+
+
 
 .flight-items{
   font-size: 16px;

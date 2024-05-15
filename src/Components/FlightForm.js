@@ -47,7 +47,7 @@ const FlightForm = () => {
    <>
    <div className='container-form'>
       <form className='form' onSubmit={onSubmit}>
-        <div>
+        <div className = "form-content">
           <p>Destination From</p>
           <div>
             <select className='select-option from-select' name='Destination_From' id='Destination_From' value={Destination_From} onChange={onChange} required>
@@ -70,7 +70,7 @@ const FlightForm = () => {
           </div>
         </div>
 
-        <div>
+        <div className = "form-content">
           <p>Destination To</p>
           <div>
             <select className='select-option to-select' name='Destination_To' id='Destination_To' value={Destination_To} onChange={onChange} required>
@@ -92,12 +92,12 @@ const FlightForm = () => {
           </div>
         </div>
 
-        <div>
+        <div className = "form-content">
           <p>Journey Date</p>
           <input type='date' className='select-option' name='Journey_Date' id='Journey_Date' value={Journey_Date} onChange={onChange} required />
         </div>
 
-        <div>
+        <div className = "form-content">
           <p>Guests</p>
           <div>
             <select className='select-option' name='Guests' id='Guests' value={Guests} onChange={onChange} required>
@@ -110,7 +110,7 @@ const FlightForm = () => {
           </div>
         </div>
 
-        <div>
+        <div className = "form-content">
           <p>Class Type</p>
           <div>
             <select className='select-option' name='ClassType' id='ClassType' value={ClassType} onChange={onChange} required>
@@ -121,10 +121,14 @@ const FlightForm = () => {
           </div>
         </div>
 
-        <button className='select-option book'> 
-         
-          <FaCartPlus/>
-         Booking </button>
+
+        <div className = "form-content">
+          <button className='select-option book'> 
+               <FaCartPlus/>
+             Booking 
+         </button>
+        </div>
+        
       </form>
     </div>
    </>
